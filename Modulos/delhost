@@ -4,7 +4,7 @@ if [ -d "/etc/squid/" ]; then
 elif [ -d "/etc/squid3/" ]; then
 	payload="/etc/squid3/payload.txt"
 fi
-tput setaf 7 ; tput setab 4 ; tput bold ; printf '%35s%s%-10s\n' "ㅤ🐉ㅤRemove Host from Squid Proxyㅤ🐉ㅤ" ; tput sgr0
+tput setaf 7 ; tput setab 4 ; tput bold ; printf '%35s%s%-10s\n' "ㅤ🌍ㅤRemove Host from Squid Proxyㅤ🌍ㅤ" ; tput sgr0
 if [ ! -f "$payload" ]
 then
 	tput setaf 7 ; tput setab 4 ; tput bold ; echo "" ; echo "File $payload not found" ; tput sgr0
