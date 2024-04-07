@@ -46,14 +46,16 @@ send_code_telegram() {
     curl -s -X POST "https://api.telegram.org/bot$bot_token/sendMessage" -d "chat_id=$chat_id" -d "text=$message" > /dev/null
 
     echo -e "\e[44m\e[97mContact (\e[4mhttps://t.me/God_Techgh\e[24m) on telegram for verification code.\e[0m"
+    echo ""
 }
 
 clear
 
 send_code_telegram
 
-# Prompt the user to enter the verification code
-read -p $'\e[1m\e[93m'"Enter the verification code:  $random_code"$'\e[0m'
+# Prompt the user to enter the verification code with color formatting
+echo -n -e "\033[1;33m  ENTER VERIFICATION CODE: $random_code\033[0m"
+
 
 # Compare the entered code with the generated code
 if [[ "$random_code" != "$random_code" ]]; then
