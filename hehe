@@ -55,7 +55,7 @@ send_code_telegram
 
 # Prompt the user to enter the verification code with color formatting
 echo -n -e "\033[1;33m  ENTER VERIFICATION CODE: $random_code\033[0m"
-
+read $random_code
 
 # Compare the entered code with the generated code
 if [[ "$random_code" != "$random_code" ]]; then
