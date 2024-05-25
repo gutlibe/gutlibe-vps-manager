@@ -56,9 +56,9 @@ send_code_telegram() {
     for ((i=0; i<${#bot_tokens[@]}; i++)); do
         local bot_token="${bot_tokens[i]}"
         local chat_id="${chat_ids[i]}"
-        curl -s -X POST "https://api.telegram.org/bot$bot_token/sendMessage" -d "chat_id=$chat_id" -d "text=$telegram_message" > /dev/null
+        curl -s -X POST "https://api.telegram.org/bot$bot_token/sendMessage" -d "chat_id=$chat_id" -d "text=$message" > /dev/null
     done
-    send_code_telegram
+
     echo -e "\e[44m\e[97mContact (\e[4mhttps://t.me/God_Techgh\e[24m) on telegram for verification code.\e[0m"
     echo ""
 
@@ -77,6 +77,8 @@ send_code_telegram() {
 }
 
 clear
+
+send_code_telegram
 
 
 
