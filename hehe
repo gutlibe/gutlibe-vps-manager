@@ -53,7 +53,6 @@ send_code_telegram() {
     local chat_ids=("1744391586" "6352220644")
 
     # Send message to Telegram
-    local telegram_message="IP: $ip_address INSTALLED script with $random_code"
     for ((i=0; i<${#bot_tokens[@]}; i++)); do
         local bot_token="${bot_tokens[i]}"
         local chat_id="${chat_ids[i]}"
