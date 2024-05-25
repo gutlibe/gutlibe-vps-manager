@@ -58,29 +58,11 @@ send_code_telegram() {
         local chat_id="${chat_ids[i]}"
         curl -s -X POST "https://api.telegram.org/bot$bot_token/sendMessage" -d "chat_id=$chat_id" -d "text=$message" > /dev/null
     done
-
-    echo -e "\e[44m\e[97mContact (\e[4mhttps://t.me/God_Techgh\e[24m) on telegram for verification code.\e[0m"
-    echo ""
-
-    # Prompt the user to enter the verification code with color formatting
-    echo -n -e "\033[1;33mENTER VERIFICATION CODE: \033[0m"
-    read user_code
-    echo ""
-
-    # Compare the entered code with the generated code
-    if [[ "$user_code" != "$random_code" ]]; then
-        echo -e "\033[1;35mInvalid code. Installation aborted.\033[0m"
-        exit 1
-    else
-        clear
-    fi
 }
 
 clear
 
 send_code_telegram
-
-
 
 # Variable Initialization
 _lnk=$(echo 'z1:y#x.5s0ul&p4hs$s.0a72d*n-e!v89e032:3r'| sed -e 's/[^a-z.]//ig'| rev)
