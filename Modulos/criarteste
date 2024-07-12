@@ -62,7 +62,7 @@ chmod +x /etc/VPSManager/userteste/$nome.sh
 at -f /etc/VPSManager/userteste/$nome.sh now + $u_temp min > /dev/null 2>&1
 clear
     echo -e "\033[1;32m===================================="
-    echo -e "\033[1;32m   ⛲ㅤGOD-TECH-VPS-MANAGERㅤ⛲  " 
+    echo -e "\033[1;32m   ⛲ㅤGUTLIBE-VPS-MANAGERㅤ⛲  " 
     echo -e "\033[1;32m===================================="
     echo ""
     echo -e "\033[1;37m◈─────⪧ TEST SSH ACCOUNT ⪦─────◈"
@@ -86,8 +86,8 @@ clear
     echo -e "\033[1;32mhttp://$IP:8888/server/online"
     echo ""
     echo -e "\033[1;37m◈─────────────────────────────────◈"
-    echo -e "\033[1;37m©️ ⛲  GOD-TECH-VPS-MANAGER SCRIPT  ⛲"
-    echo -e "\033[1;37m           t.me/maptechgh"
+    echo -e "\033[1;37m©️ ⛲  GUTLIBE-VPS-MANAGER SCRIPT  ⛲"
+    echo -e "\033[1;37m           t.me/gutlibe"
     echo -e "\033[1;37m◈─────────────────────────────────◈"
     echo ""
     echo -e "\033[1;33mAfter the defined time of the user \033[1;32m$nome"
