@@ -2340,6 +2340,11 @@ while :; do
                 'how many days of access:')
                     verifica_acesso
                     [[ "$_erro" == '1' ]] && break
+    [[ ${message_text[$id]} != ?(+|-)+([0-9]) ]] && {
+        ShellBot.sendMessage --chat_id ${message_chat_id[$id]}             --text "$(echo -e "❌ Error ! \n\nUse only numbers for days [EX: 30]")"             --parse_mode html
+        >$CAD_ARQ # Clear the temporary file to prevent partial data usage
+        break
+    }
                     echo "Validade: ${message_text[$id]}" >>$CAD_ARQ
                     _clientrev=$(cat $CAD_ARQ)
                     criar_rev $CAD_ARQ
